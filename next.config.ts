@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     }],
   },
   transpilePackages: ['vervalpd-node'],
+  poweredByHeader: false,
 };
 
 export default nextConfig;
