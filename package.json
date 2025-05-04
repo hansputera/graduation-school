@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.3.1",
     "arktype": "^2.1.20",
     "dayjs": "^1.11.13",
     "next": "15.3.1",
@@ -24,6 +25,7 @@
     "@types/node": "^20.17.32",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.3",
+    "critters": "^0.0.25",
     "eslint": "^9.26.0",
     "eslint-config-next": "15.3.1",
     "tailwindcss": "^4.1.5",

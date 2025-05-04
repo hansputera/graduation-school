@@ -6,7 +6,9 @@ import { graduationCheck } from '@/validations/graduationCheck';
 import { ArkErrors } from 'arktype';
 import Image from 'next/image';
 import React from 'react';
-import { Accepted } from './accepted';
+import dynamic from 'next/dynamic';
+
+const AcceptedLazy = dynamic(() => import('./accepted'));
 
 export const CheckFormSection = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -68,7 +70,7 @@ export const CheckFormSection = () => {
   };
 
   return data ? (
-    <Accepted student={data} />
+    <AcceptedLazy student={data} />
   ) : (
     <Container>
       <div className="flex justify-center md:justify-start items-center">
@@ -85,7 +87,7 @@ export const CheckFormSection = () => {
           height={150}
         />
       </div>
-      <h1 className="text-white text-3xl md:text-4xl font-bold uppercase max-w-xl md:max-w-2xl mt-3">
+      <h1 className="text-white text-2xl md:text-3xl font-bold uppercase max-w-xl md:max-w-xl mt-3">
         Pengumuman Kelulusan SMAN 3 PALU {new Date().getFullYear()}
       </h1>
       <p className="text-gray-500 text-lg font-sans font-medium">
@@ -170,7 +172,7 @@ export const CheckFormSection = () => {
         <div>{error && <p className="font-sans text-red-400 italic font-medium">{error}</p>}</div>
         <div className="flex space-x-5 justify-center items-center">
           <button
-            className="p-3 text-white bg-blue-400 rounded-4xl text-md w-full font-bold font-sans hover:cursor-pointer disabled:opacity-50"
+            className="p-3 text-white bg-[#004599] rounded-4xl text-md w-full font-bold font-sans hover:cursor-pointer disabled:opacity-50"
             type="submit"
             disabled={isLoading}
           >
@@ -183,9 +185,12 @@ export const CheckFormSection = () => {
         <br />
         Made with ❤ by{' '}
         <a href="https://linkedin.com/in/hansputera" className="text-blue-300">
-          Hanif Dwy Putra S
-        </a>
+          Hxxc
+        </a>{' '}
+        for SMAN 3 PALU
       </p>
     </Container>
   );
 };
+
+export default CheckFormSection;

@@ -115,3 +115,5 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, onCo
     </div>
   );
 };
+
+export default CountdownTimer;

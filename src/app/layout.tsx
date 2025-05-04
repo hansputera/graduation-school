@@ -94,6 +94,7 @@ export const metadata: Metadata = {
       id: 'https://kelulusan.smnan3palu.sch.id',
       en: 'https://kelulusan.sman3palu.sch.id',
     },
+    canonical: 'https://kelulusan.sman3palu.sch.id',
   },
   classification: 'Graduation Website',
 };

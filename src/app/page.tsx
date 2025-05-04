@@ -1,17 +1,19 @@
 'use client';
 
 import { deadlineDate } from '@/lib/deadline';
-import { CheckFormSection } from '@/sections/checkform';
-import { CountdownTimer } from '@/sections/countdownTimer';
-import React from 'react';
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
+
+const CheckFormSectionLazy = dynamic(() => import('@/sections/checkform'));
+const CountdownTimerLazy = dynamic(() => import('@/sections/countdownTimer'));
 
 export default function Home() {
-  const [formEnabled, setFormEnabled] = React.useState(false);
+  const [formEnabled, setFormEnabled] = useState(false);
 
   return (
     <>
-      {formEnabled && <CheckFormSection />}
-      {!formEnabled && <CountdownTimer targetDate={deadlineDate} onComplete={() => setFormEnabled(true)} />}
+      {formEnabled && <CheckFormSectionLazy />}
+      {!formEnabled && <CountdownTimerLazy targetDate={deadlineDate} onComplete={() => setFormEnabled(true)} />}
     </>
   );
 }

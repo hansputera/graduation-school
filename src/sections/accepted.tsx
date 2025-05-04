@@ -71,3 +71,5 @@ export const Accepted: React.FC<{
     </Container>
   );
 };
+
+export default Accepted;
