@@ -8,8 +8,7 @@ dayjs.extend(utc);
 
 export const deadlineDate = dayjs
   .tz(new Date(2025, 4, 5), 'Asia/Makassar')
-  .add(19, 'hours')
-  .add(30, 'minutes')
+  .add(20, 'hours')
   .locale(id);
 // export const deadlineDate = dayjs
 //   .tz(new Date(2025, 4, 4), 'Asia/Makassar')
