@@ -185,7 +185,7 @@ export const CheckFormSection = () => {
         <br />
         Made with ❤ by{' '}
         <a href="https://linkedin.com/in/hansputera" className="text-blue-300">
-          Hxxc
+          Hanif
         </a>{' '}
         for SMAN 3 PALU
       </p>

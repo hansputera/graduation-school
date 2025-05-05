@@ -5,10 +5,12 @@ import { ArkErrors } from 'arktype';
 import { NextRequest } from 'next/server';
 import id from 'dayjs/locale/id.js';
 import dayjs from 'dayjs';
+import { join } from 'path';
+import { tmpdir } from 'os';
 
 export async function POST(request: NextRequest) {
   try {
-    await initializeVervalCookieFile('/tmp/vervalpd-cookies');
+    await initializeVervalCookieFile(join(tmpdir(), 'vervalpd-cookies'));
     const json = await request.json();
     const payload = graduationCheck(json);
 
