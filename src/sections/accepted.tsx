@@ -24,7 +24,7 @@ export const Accepted: React.FC<{
         </>
       }
     >
-      <div className="flex flex-row lg:space-x-70 space-y-10">
+      <div className="flex flex-row lg:space-x-70 space-y-5">
         <div className="flex flex-col">
           <div className="flex items-center justify-start lg:hidden">
             <QRCode
@@ -38,7 +38,7 @@ export const Accepted: React.FC<{
             NISN {props.student.nisn} - NIS {props.student.profile.nis}
           </p>
           <h1 className="text-xl md:text-3xl font-sans text-white font-bold">{props.student.name}</h1>
-          <h2 className="text-2xl font-sans text-white font-extralight uppercase">
+          <h2 className="text-lg md:text-xl font-sans text-white font-extralight uppercase">
             {props.student.profile?.grade.length ? props.student.profile.grade : props.student.grade}
             <br />
             SMA NEGERI 3 PALU

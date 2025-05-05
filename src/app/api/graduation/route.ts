@@ -39,7 +39,6 @@ export async function POST(request: NextRequest) {
 
     const student = results[0];
     const studentDate = dayjs(student.born.date, 'DD MMM YYYY').locale(id);
-
     if (
       student.nisn !== payload.nisn.trim() ||
       !student.grade.endsWith('12') ||
